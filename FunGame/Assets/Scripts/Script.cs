@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Script : MonoBehaviour
 {
+  private float speed = 30.0f;
+
   public Vector3 scaleChange;
   // Start is called before the first frame update
   void Start()
@@ -14,6 +16,6 @@ public class Script : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    transform.localScale += scaleChange;
+    transform.Translate(Vector3.left * Time.deltaTime * speed);
   }
 }
